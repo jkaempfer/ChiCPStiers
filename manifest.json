@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Chicago CPS Tier Tags (MVP)",
+  "version": "0.1.0",
+  "description": "Adds CPS tier badges to Realtor listings in Chicago using CPS boundary polygons.",
+  "permissions": [],
+  "host_permissions": [
+    "https://api.cps.edu/*",
+    "https://www.realtor.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.realtor.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
